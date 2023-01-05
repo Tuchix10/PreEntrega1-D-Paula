@@ -1,7 +1,7 @@
 function calculo () {
     let monto=Number(document.getElementById("dinero").value)
     let tm=(75/12)/100
-    if(monto>=1000) {
+    if(monto>=1000 && monto<=10000000) {
         if (document.getElementById("radio1").checked) {
             d1=monto*tm;
             r1=d1+monto;

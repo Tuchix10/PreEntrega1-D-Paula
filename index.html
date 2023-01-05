@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>Simula tu plazo fijo | Banco Coderhouse</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido al Simulador de Plazo Fijo del Banco CoderHouse</h1>
+    </header>
+        <section>
+            <form action="">
+                <div class="cuadrogeneral">
+                    <div>
+                        <h2>Ingresa el monto</h2>
+                        <div>
+                            <input type="number" min="1" class="ingresonumero" id="dinero">
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Ingresa el periodo</h2>
+                        <div class="tiempotexto">
+                            <p>30 días</p>
+                            <p>90 días</p>
+                            <p>365 días</p>
+                        </div>
+                        <div class="tiempocheck">
+                            <input type="radio" name="periodo" id="radio1">
+                            <input type="radio" name="periodo" id="radio2">
+                            <input type="radio" name="periodo" id="radio3">
+                        </div>
+                    </div>
+                    <div>
+                        <h2>¿Desea reinvertir el total mensual?</h2>
+                        <div class="decidirtexto">
+                            <p>Si</p>
+                            <p>No</p>
+                        </div>
+                        <div class="decidircheck">
+                            <input type="radio" name="reinvertir" id="radio4">
+                            <input type="radio" name="reinvertir" id="radio5">
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" value="Calcular" class="botoncalculo" onclick="calculo()">
+                    </div>
+                    <div>
+                        <h2>El total generado es:</h2>
+                        <h3 id="resultado"></h3>
+                    </div>
+                </div>
+            </form>
+        </section>
+    <script src="config.js"></script>
+</body>
+</html>

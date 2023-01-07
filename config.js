@@ -5,6 +5,12 @@ const periodoMinimo = 1;
 const tasa=75;
 const tasaMensual=(tasa/12)/100;
 
+    const f = new Intl.NumberFormat('es-Ar', {
+        style: 'currency',
+        currency: 'ARS',
+        minimunFractionDigits: 2
+    });
+
 function reinvertir() {
     return document.getElementById("reinvertirSi").checked;
 }
@@ -58,21 +64,20 @@ function generarTabla () {
             document.getElementById("tab").innerHTML=document.getElementById("tab").innerHTML+
                     `<tr>
                         <td> ${i}</td>
-                        <td> ${k.toFixed(2)}</td>
-                        <td> ${dato1}</td>
-                        <td> ${dato3}</td>
+                        <td> ${f.format(k)}</td>
+                        <td> ${f.format(dato1)}</td>
+                        <td> ${f.format(dato3)}</td>
                     </tr>`;
         }
-        ganancia=dato3-monto;
-        document.getElementById("t1").innerHTML=monto;
-        document.getElementById("t2").innerHTML=ganancia;
-        document.getElementById("t3").innerHTML=dato3;
+        return;
     }
-    else {
-        ganancia=(monto*(tasaMensual*periodo));
-        totalSinReinvertir=monto+ganancia;
-        document.getElementById("t1").innerHTML=monto;
-        document.getElementById("t2").innerHTML=ganancia;
-        document.getElementById("t3").innerHTML=totalSinReinvertir;
-    }
+        let ganancia=(monto*(tasaMensual*periodo));
+        let totalSinReinvertir=monto+ganancia;
+        document.getElementById("tab").innerHTML=document.getElementById("tab").innerHTML+
+        `<tr>
+            <td> ${1}</td>
+            <td> ${f.format(monto)}</td>
+            <td> ${f.format(ganancia)}</td>
+            <td> ${f.format(totalSinReinvertir)}</td>
+        </tr>`;
 }

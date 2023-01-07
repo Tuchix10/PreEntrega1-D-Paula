@@ -5,7 +5,7 @@ const periodoMinimo = 1;
 const tasa=75;
 const tasaMensual=(tasa/12)/100;
 
-    const f = new Intl.NumberFormat('es-Ar', {
+    const pesoArgentino = new Intl.NumberFormat('es-Ar', {
         style: 'currency',
         currency: 'ARS',
         minimunFractionDigits: 2
@@ -64,9 +64,9 @@ function generarTabla () {
             document.getElementById("tab").innerHTML=document.getElementById("tab").innerHTML+
                     `<tr>
                         <td> ${i}</td>
-                        <td> ${f.format(k)}</td>
-                        <td> ${f.format(dato1)}</td>
-                        <td> ${f.format(dato3)}</td>
+                        <td> ${pesoArgentino.format(k)}</td>
+                        <td> ${pesoArgentino.format(dato1)}</td>
+                        <td> ${pesoArgentino.format(dato3)}</td>
                     </tr>`;
         }
         return;
@@ -76,8 +76,8 @@ function generarTabla () {
         document.getElementById("tab").innerHTML=document.getElementById("tab").innerHTML+
         `<tr>
             <td> ${1}</td>
-            <td> ${f.format(monto)}</td>
-            <td> ${f.format(ganancia)}</td>
-            <td> ${f.format(totalSinReinvertir)}</td>
+            <td> ${pesoArgentino.format(monto)}</td>
+            <td> ${pesoArgentino.format(ganancia)}</td>
+            <td> ${pesoArgentino.format(totalSinReinvertir)}</td>
         </tr>`;
 }

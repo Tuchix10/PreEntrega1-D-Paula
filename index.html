@@ -14,43 +14,52 @@
     </header>
         <section>
             <form action="">
-                <div class="cuadrogeneral">
+                <div class="cuadroGeneral">
                     <div>
                         <h2>Ingresa el monto</h2>
                         <div>
-                            <input type="number" class="ingresonumero" id="dinero">
+                            <input type="number" class="ingresoDinero" id="dinero">
                         </div>
                     </div>
-                    <div>
-                        <h2>Ingresa el periodo</h2>
-                        <div class="tiempotexto">
-                            <p>30 días</p>
-                            <p>90 días</p>
-                            <p>365 días</p>
-                        </div>
-                        <div class="tiempocheck">
-                            <input type="radio" name="periodo" id="radio1">
-                            <input type="radio" name="periodo" id="radio2">
-                            <input type="radio" name="periodo" id="radio3">
-                        </div>
+                    <div class="decidirPeriodo">
+                        <h2>Ingresa el periodo en meses</h2>
+                        <input type="number" class="ingresoperiodo" id="periodo">
                     </div>
-                    <div>
-                        <h2>¿Desea reinvertir el total mensual?</h2>
-                        <div class="decidirtexto">
-                            <p>Si</p>
-                            <p>No</p>
-                        </div>
-                        <div class="decidircheck">
-                            <input type="radio" name="reinvertir" id="radio4">
-                            <input type="radio" name="reinvertir" id="radio5">
-                        </div>
+                <div>
+                    <h2>¿Desea reinvertir el total mensual?</h2>
+                    <div class="decidirTexto">
+                        <p>Si</p>
+                        <p>No</p>
                     </div>
-                    <div>
-                        <input type="button" value="Calcular" class="botoncalculo" onclick="calculo()">
+                    <div class="decidirCheck">
+                        <input type="radio" name="reinvertir" id="reinvertirSi" checked>
+                        <input type="radio" name="reinvertir" id="reinvertirNo">
                     </div>
+                </div>
+                <div>
+                    <input type="button" value="Calcular" class="botonCalculo" onclick="generarTabla()">
+                </div>
                     <div>
-                        <h2>El total generado es:</h2>
-                        <h3 id="resultado"></h3>
+                        <table class="tab">
+                            <thead>
+                                <tr>
+                                    <td>NRO</td>
+                                    <td>CAPITAL</td>
+                                    <td>CAPITAL GENERADO</td>
+                                    <td>IMPORTE A PAGAR</td>
+                                </tr>
+                            </thead>
+                            <tbody id="tab">
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td class="ft">TOTAL</td>
+                                    <td id="t1"></td>
+                                    <td id="t2"></td>
+                                    <td id="t3"></td>
+                                </tr>
+                            </tfoot>
+                        </table>
                     </div>
                 </div>
             </form>

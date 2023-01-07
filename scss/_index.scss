@@ -1,4 +1,4 @@
-.cuadrogeneral {
+.cuadroGeneral {
     background-color: chocolate;
     display: flex;
     flex-direction: column;
@@ -7,33 +7,53 @@
     border-radius: 20px;
     border: 1px solid #262626;
     text-align: center;
-    width: 450px;
-    height: 450px;
+    width: 550px;
+    height: 100%;
     margin: auto;
 }
-.tiempotexto {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-.tiempocheck {
-    display: flex;
-    justify-content: space-around;
-}
-.decidirtexto {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-.decidircheck {
-    display: flex;
-    justify-content: space-around;
-}
-.ingresonumero {
-    margin-top: 10px;
+.ingresoDinero {
+    margin: 20px auto 20px auto;
     width: 250px;
 }
-.botoncalculo {
+.decidirPeriodo {
+    h2 {
+        margin: 0px auto 10px auto;
+    }
+    input {
+        margin: 0px auto 10px auto;
+    }
+}
+.decidirTexto {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.decidirCheck {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.botonCalculo {
     padding: 5px;
     width: 100px;
+}
+.tab{
+    border-collapse: collapse;
+    text-align: center;
+    font-family: 'arial';
+    background-color: rgba(133, 45, 45, 0.693);
+    width: 500px;
+    border-radius: 10px;
+    margin: 30px auto 30px auto;
+}
+thead{
+    font-weight: bold;
+}
+tr{
+    border-bottom: 1px solid #262626;
+}
+td{
+    border-bottom: 1px solid #262626;
+    border-radius: 10px;
+    color: white;
 }
